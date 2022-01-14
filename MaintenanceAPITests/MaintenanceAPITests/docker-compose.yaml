@@ -1,0 +1,10 @@
+version: "2.4"
+
+services:
+  rcs-elevate-maintenance-api-testing:
+    build: .
+    restart: unless-stopped
+    environment:
+      - API_GATEWAY_URL=https://test.trisourcesolutions.com/maintenanceapi-uat/v1/
+      - REPAY_SSO_URL=https://sso.sandbox.repay.com/auth/realms/repay/protocol/openid-connect/token
+      - SSO_CLIENT_SECRET=cd1e172e-4d4a-4e89-9963-c8e4bfe0e217
